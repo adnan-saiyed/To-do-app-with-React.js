@@ -1,11 +1,10 @@
 import React ,{useContext, useState} from "react"
-import App from "../App"
 import { AppContext } from "../Context"
 import RemoveAll from "./RemoveAll"
 const AddToDo = () => {
     const [task,setTask] = useState('')
     const {manageTask} = useContext(AppContext)
-    const {tasks} = useContext(AppContext)
+
     
     const objMaker = () => {
 
