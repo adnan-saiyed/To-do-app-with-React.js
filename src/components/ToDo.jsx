@@ -12,7 +12,7 @@ const ToDo = ({task,index}) => {
         <div className="container">
             <p className="task">{index}. {task.task}</p>
             <div>
-                <button className="remove-btn" onClick={removeTask}><span></span>X</button>
+                <button className="remove-btn" onClick={removeTask}>X</button>
                 <button className="remove-btn" onClick={addCompletedTask}>&#10004;</button>
             </div>
             
