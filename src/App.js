@@ -3,6 +3,7 @@ import ToDoList from './components/ToDoList';
 import AddToDo from './components/AddToDo';
 import CompletedTaskList from './components/CompletedTaskList';
 import { AppContext } from './Context';
+
 function App(){
     const [tasks,setTasks] = useState([])
     const [completedTask,setCompletedTask] = useState([])
@@ -11,9 +12,7 @@ function App(){
             case 'REMOVE_TASK':{
                 setTasks(tasks.filter(task => task.id !== object.taskId))
                 return
-            }
-                
-                
+            }    
             case 'ADD_TASK':{
                 if(object.newTask.task)
                 setTasks([...tasks,object.newTask])
@@ -39,14 +38,9 @@ function App(){
                     <ToDoList/>
                     <CompletedTaskList/>
                 </div>
-                
             </AppContext.Provider>
-            
         </div>
     )
 }
-  
-  
-
 
 export default App;
